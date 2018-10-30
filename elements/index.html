@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Angular Elements - Framework Poll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <framework-poll username="sushil123" password="sushil" loginurl="http://google.com"></framework-poll>
+    <script type="text/javascript" src="framework-poll.js"></script>
+
+    <script type="text/javascript">
+    var myArr = ['1', '2', '3'];
+    document.querySelector('framework-poll').setAttribute('data', myArr);
+    document.querySelector('framework-poll').addEventListener('response',function(res){
+            console.log(res);
+            alert(res.detail);
+    })
+    </script>
+
+</body>
+</html>
